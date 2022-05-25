@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FornecedoresController;
+use App\Http\Controllers\CarroController;
 
 Route::get('/laravel', function () {
     return view('welcome');
@@ -44,3 +45,13 @@ Route::get('/fornecedores/alterar/{id}', [FornecedoresController::class, 'altera
 Route::post('/fornecedores/alterar', [FornecedoresController::class, 'salvar'])->name('fornecedores_salvar');
 
 Route::get('/fornecedores/excluir/{id}', [FornecedoresController::class, 'excluir'])->name('fornecedores_excluir');
+
+Route::get('/carro/novo',[CarroController::class,'cad_novo']);
+
+Route::post('/carro/novo',[CarroController::class, 'novo'])->name('carros_novo');
+
+Route::get('/carro/listar', [CarroController::class, 'listar'])->name('carros_listar');
+
+Route::get('produtos/fornecedores/listar', [FornecedoresController::class, 'relacionamento'])->name('produtos_fornecedores_listar');
+
+

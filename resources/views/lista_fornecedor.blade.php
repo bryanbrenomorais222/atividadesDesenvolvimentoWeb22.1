@@ -32,6 +32,13 @@
     </tbody>
 </table>
 
+<div class="container fluid">
+    <div>
+        <a href="{{ route('fornecedores_novo')}}"><button class="btn btn-primary">Voltar</button> </a>
+        <a href="{{ route('produtos_fornecedores_listar')}}"><button class="btn btn-primary">Produtos - Fornecedor</button> </a>
+    </div>
+</div>
+
 <script>
     function excluir(id){
         if (confirm(`Deseja realmente excluir o fornecedor ${id}?`)){

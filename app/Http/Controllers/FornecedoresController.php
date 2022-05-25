@@ -73,4 +73,10 @@ class FornecedoresController extends Controller
         return redirect()->route('fornecedores_listar');
     }
 
+    function relacionamento($id){
+        $fornecedor = Fornecedor::all();
+
+        return view('lista_carro_fornecedor', ['fornecedor'=> $fornecedor]);
+    }
+
 }
